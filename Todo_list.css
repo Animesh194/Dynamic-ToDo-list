@@ -1,0 +1,83 @@
+body{
+	font-family: Roboto;
+	/*THE BACKGROUND IS A BEAUTIFUL LINEAR GRADIENT WHICH IS TAKEN FROM "UIGRADIENTS.COM"*/
+	background: #83a4d4;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1{
+	background-color: #2980b9;
+	color: white;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 400; /*or "normal"*/
+	margin: 0;
+	padding: 10px 20px;
+}
+
+ul{
+	list-style: none; /*it removes the bullet or numbering which is default*/
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	height: 40px;
+	line-height: 40px;
+
+}
+
+span{
+	height: 40px;
+	color: white;
+	background-color: #e74c3c;
+	margin-right: 20px;
+	width: 0;
+	text-align: center;
+	display: inline-block;
+	transition: 300ms;
+	opacity: 0;
+}
+
+input{
+	height: 18px;
+	line-height: 18px;
+	background-color: #f7f7f7;
+	padding: 13px 13px 13px 20px;
+	width: 100%;  /*If we use this then width and height will not include padding or border or margin so the final size will exceed the parent*/
+	box-sizing: border-box; /*This fix the box's size...it includes the padding and border but not margin in the size of the box...done to stop exceeding*/
+	border: 3px solid rgba(0,0,0, 0);    /*this line is used to makeup the slight space being taken when not focused*/
+}
+
+li:nth-of-type(2n+1){         /*or nth-child(2n+1) will also work*/
+	background-color: white;
+}
+
+li:hover span{
+	width: 40px;
+	opacity: 1.0;
+}
+
+/*WHEN INPUT IS SELECTED WE GET A FOCUS EFFECT...WHICH IS THE PSEUDO SELECTOR focus*/
+input:focus{
+	background-color: white;
+	border: 3px solid #2980b9;
+	outline: none;
+}
+
+#container{
+	background-color: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.1);/*box shadow can be given upto four values and keyword:global keywords,x-offset,y-offset,blur-radius,spread-radius*/
+	width: 360px;                        /*then colour*/
+	margin: 100px auto;
+}
+
+.completed{
+	color: gray;
+	text-decoration: line-through;
+}
+
+.fa-plus{
+	float: right;
+}
